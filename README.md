@@ -1,6 +1,7 @@
 # helloWorld
 全局变量用l前缀
 参数变量用_前缀
+a变量的附属变量
 /*
 TASK:beads
 PROB:22920179
@@ -12,8 +13,8 @@ LANG:C++
 
 
 
-char ch[1000] = 0;
-int n;
+char lch[1000] = 0;
+int ln;
 int main()
 {
     int i,a[1000]=0;
@@ -29,11 +30,14 @@ int main()
     fclose(pFile1);fclose(pFile2);
     return 0;
 }
-int getN(int i)
+int getN(int _i)
 {
-    int b=1,j=1,k=i,a=ch[i],c;
-    while(ch[++k] == a)
-        j++;
+    int i=_i,j,a=0,b=0,an,bn;
+    if(_i=0) j=ln-1; else j=i-1;
+    while(ch[++i] == a)
+        a++;
+        
+        
     if()
 
 
