@@ -5,10 +5,6 @@ LANG:C++
 */
 
 #include <stdio.h>
-//yongde shihoumeitianfuxi,buyongde shihouliuxiabijijiuhaole,huozhe
-//fuxidagang,zheyangchongshijiurongyile
-//yaobufuxiyixia C yuyanba,ganjuewangjichabuduole
-//buduizhishikaolvdeshaoeryi
 char lbeads[1000];
 int ln;
 int getBN(int _i);
