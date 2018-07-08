@@ -22,7 +22,7 @@ LANG:C++
 int ln;
 FILE *pFile1 = fopen(".in","r");
 FILE *pFile2 = fopen(".out","w");
-//函数作用写在这里
+//函数作用写在这里-函数思路写在这里
 int main()//函数参数声明写在这里
 {//函数返回值声明写在这里
     fclose(pFile1);fclose(pFile2);
