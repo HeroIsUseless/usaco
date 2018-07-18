@@ -98,6 +98,7 @@ int main()
     }
 
     fprintf(pFile2,"7\n");
+    fclose(pFile1);fclose(pFile2);
     return 0;
 }
 
