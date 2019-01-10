@@ -29,12 +29,13 @@ int main()
         //while (scanf("%d%d", &n, &m) != EOF){
         //cin >> n >> m;
         scanf("%d%d", &n, &m);
-        int numCnt = 0;
+        int numCnt = 0;//这个是计数
         for (int i = 0; i <= m; ++i)
         for (int j = 0; j <= m; ++j) {
-                if (!exist[i * i + j * j]){
-                        num[numCnt++] = i * i + j * j;
-                        exist[i * i + j * j] = 1;
+                if (!exist[i * i + j * j]){//存在判定，一个平方的作用
+                //这个是如果为0，堆分配会为0
+                        num[numCnt++] = i * i + j * j;//并且进行计数
+                        exist[i * i + j * j] = 1;//这个是flag
                 }
         }
  

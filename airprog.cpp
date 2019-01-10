@@ -17,7 +17,7 @@ using namespace std;
 int main(){
     FILE *pFile1 = fopen("airprog.in", "r");
     FILE *pFile2 = fopen("airprog.out", "w");
-    int n, m;
+    int n, m;//p, q都选自m
     fscanf(pFile1, "%d %d", &n, &m);
     return 0;
 }
