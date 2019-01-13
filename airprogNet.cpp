@@ -1,4 +1,9 @@
 
+/*
+ID:22920179
+LANG:C++
+TASK:ariprog
+*/
 #include<fstream>
 #include<iostream>
 #include<algorithm>
@@ -18,7 +23,7 @@ bool check(int a, int b)
         for (int i = 0; i < n; ++i){
                 if (!exist[a]) return 0;
                 a += b;
-        }
+        }//一直进行累加，判断它是否在二项式里，如果都存在才行
         return 1;
 }
  
@@ -38,13 +43,16 @@ int main()
                         exist[i * i + j * j] = 1;//这个是flag
                 }
         }
- 
-        sort(num, num + numCnt);
-        int a = num[0], b, pos;
-        int cnt = 0;
-        int bigB = (num[numCnt - 1] - num[0]) / (n - 1);
-        for (b = 1; b <= bigB; ++b){
-                for (int j = 0; j < numCnt; ++j){
+    //现在是把m的从i到j的所有的平方存进去了
+        sort(num, num + numCnt);//现在进行排序，从头到尾进行 排序
+        //下面才开始真正的计算
+        int b, pos;
+        int cnt = 0;//对，就是这样
+        int bigB = (num[numCnt - 1] - num[0]) / (n - 1);//最大的减去最小的，得出的数在整除
+        //n-1，这个n是等差数列的值减去一个1
+        //不知道这个数字是什么
+        for (b = 1; b <= bigB; ++b){//对b进行计算，b代表的是一个，额，距离之类的东西
+                for (int j = 0; j < numCnt; ++j){//又进行一次遍历
                         if (check(num[j], b)) ++cnt, printf("%d %d\n", num[j], b);
                         if (num[j] + (n - 1) * b > num[numCnt - 1]) break;
                 }
