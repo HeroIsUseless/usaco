@@ -1,13 +1,29 @@
+
 #include "iostream"
 #include "cstdio"
+#include "algorithm"
 #include "cstdlib"
 #include "set"
 using namespace std;
-int a=0, b=0, c=0; 
-int ra=0, rb=0, rc=0;
+int a, b, c; 
+int flag[25][25];
 std::set<int> res;
-void Process(){
-    if()
+void dfs(int ca, int cc){
+    if(flag[ca][cc] == 1) return;
+    else flag[ca][cc] = 1;
+
+    if(ca == 0) res.insert(cc);
+    int cb = c - cc - ca;
+    //a->b
+    if(ca != 0) dfs(ca-min(ca, b-cb), cc);
+    //a->c
+    if(ca != 0) dfs(ca-(c-cc), );//对呀 
+    //b->a
+    //b->c
+
+    
+    //c->a
+    //c->b
 }
 //输出这么个东西
 //当桶A为空的时候，倒的顺序会有不同
@@ -19,15 +35,11 @@ int main(){
     FILE *pFile1 = fopen("milk3.in", "r");
     FILE *pFile2 = fopen("milk3.out", "w");
     fscanf(pFile1, "%d%d%d", &a, &b, &c);
-    rc = c;
-    Process();
+    m = c;
+    dfs();
     for(auto var : res){
-        cout << var;
+        cout << var <<" ";
     }
-
-
-
-
     fclose(pFile1); fclose(pFile2);
     return 0;
 }
